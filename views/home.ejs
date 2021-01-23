@@ -28,6 +28,11 @@
                         <div id="post-info" >
                             <div id="post-info-name";>
                                <b><%= post.user.name %></b>
+                               <%if (locals.user && locals.user.id == post.user.id) {%>
+                               <small>
+                                   <a href="/posts/destroy/<%= post.id %>">delete</a>
+                               </small>
+                               <%}%>
                             </div>
                                     <small id="post-info-time">
                                         <%= post.createdAt.getDate()+"-"+(post.createdAt.getMonth()+1)+"-"+post.createdAt.getFullYear()%>
