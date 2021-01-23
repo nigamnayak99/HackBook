@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/_header.css">  
+<header>
+    <!--Header main Starts Here-->
+    <main id="header-main">
+
+
+        <!--This div is for header content-->
+        <div id="header-content">
+
+            <!--This div is for Logo-->
+                <div id="header-logo">
+                   <a href="/"> <img src="/images/Hb.png" id="logo" alt="nf"></a>
+                </div>
+
+
+            <!--This div is for items-->
+                <div id="header-itmes">
+                    <ul>
+                            <% if (locals.user) {%>
+                                <li>
+                                    <a href="/users/profile"><%=user.name%></a>
+                                </li>
+                                <li>
+                                    <button onclick="document.location='/users/sign-out'">Sign-Out</button>
+                                </li>
+                            <% }else{ %>
+                                <li id="sign-in">
+                                    <button onclick="document.location='/users/sign-in'">Sign-In</button>
+                                </li>
+                                <li id="sign-up">
+                                    <button onclick="document.location='/users/sign-up'">Sign-Up</button>
+                                </li>
+
+                            <%}%>
+                    </ul>
+                </div>
+
+        </div>
+    <!--Header Main Ends Here-->
+    </main>
+</header>

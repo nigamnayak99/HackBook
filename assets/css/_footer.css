@@ -1,0 +1,24 @@
+body {
+  height: 100vh; }
+
+#footer-main {
+  height: auto;
+  width: 100%;
+  background-image: linear-gradient(to top right, #0A65C2, #5A5A94);
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-family: sans-serif;
+  box-shadow: 2px 2px 2px #D9DBDE; }
+  #footer-main #reserved-rights {
+    margin: 10px; }
+  #footer-main #useful-links ul {
+    padding: 0; }
+    #footer-main #useful-links ul li {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none; }
+      #footer-main #useful-links ul li a {
+        text-decoration: none;
+        color: white; }

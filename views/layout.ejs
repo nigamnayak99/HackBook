@@ -1,0 +1,32 @@
+<html>
+
+    <head><!--Head Starts Here-->
+
+        <!--Title Of page-->
+        <title>
+            <%=title%>
+        </title>
+        <script src="https://kit.fontawesome.com/7fbf0dbe07.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/layout.css">
+
+        <%- style %><!--Extracting Styles automatically from body_pages-->
+
+    </head><!--Head Ends Here-->
+
+<!---*************************************************-->
+
+    <body ><!--Body Starts Here-->
+
+        <%- include('_header'); -%>
+        <main id="layout-main" >
+            <!--Header and footer previously were outside of body-->
+            <%- body %><!-- Predefined 'body' which automatically -->
+                    <!-- loads the required body -->
+        </main>
+        <%- include('_footer'); -%>
+
+
+        <%- script %><!--Extracting Scripts automatically from body_pages-->
+    </body><!--Body Ends Here-->
+
+</html>

@@ -1,0 +1,129 @@
+@media only screen and (max-width: 1050px) {
+  header #header-main {
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 4px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 9%;
+    box-shadow: 2px 2px 2px #D9DBDE;
+    font-family: sans-serif; }
+    header #header-main #header-content {
+      height: 60%;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      header #header-main #header-content #header-logo {
+        height: 100%;
+        width: auto;
+        margin-left: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem; }
+        header #header-main #header-content #header-logo #logo {
+          height: 100%;
+          margin: auto;
+          border-radius: 50%; }
+      header #header-main #header-content #header-itmes {
+        margin-right: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        header #header-main #header-content #header-itmes ul {
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          header #header-main #header-content #header-itmes ul li {
+            color: black;
+            list-style-type: none;
+            margin: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center; }
+            header #header-main #header-content #header-itmes ul li a {
+              text-decoration: none;
+              color: black;
+              font-weight: 900; }
+            header #header-main #header-content #header-itmes ul li button {
+              border: 0.5px;
+              border-radius: 10px;
+              border-color: #0A65C2;
+              margin: 10px;
+              color: #0A65C2;
+              height: auto;
+              padding: 10px;
+              font-size: medium;
+              visibility: hidden; } }
+
+@media only screen and (min-width: 1050px) {
+  header #header-main {
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 4px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 9%;
+    box-shadow: 2px 2px 2px #D9DBDE;
+    font-family: sans-serif; }
+    header #header-main #header-content {
+      height: 60%;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      header #header-main #header-content #header-logo {
+        height: 100%;
+        width: auto;
+        margin-left: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem; }
+        header #header-main #header-content #header-logo #logo {
+          height: 100%;
+          margin: auto;
+          border-radius: 50%; }
+      header #header-main #header-content #header-itmes {
+        margin-right: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        header #header-main #header-content #header-itmes ul {
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          header #header-main #header-content #header-itmes ul #sign-up {
+            width: 0;
+            visibility: hidden; }
+          header #header-main #header-content #header-itmes ul li {
+            color: black;
+            list-style-type: none;
+            margin: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center; }
+            header #header-main #header-content #header-itmes ul li a {
+              text-decoration: none;
+              color: black;
+              font-weight: 900; }
+            header #header-main #header-content #header-itmes ul li button {
+              border: 0.5px;
+              border-radius: 10px;
+              border-color: #0A65C2;
+              margin: 10px;
+              color: #0A65C2;
+              height: auto;
+              padding: 10px;
+              font-size: medium; } }
