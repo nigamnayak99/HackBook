@@ -1,3 +1,32 @@
-    <h1>
-        HackBook / <%= title%>
-    </h1>
+<link rel="stylesheet" href="/css/post.css"> 
+
+
+<div id="post">
+    <li >
+        <div id="post-info" >
+            <div id="post-info-name";>
+               <b><%= post.user.name %></b>
+               <%if (locals.user && locals.user.id == post.user.id) {%>
+               <small>
+                <%= post.createdAt.getDate()+"-"+(post.createdAt.getMonth()+1)+"-"+post.createdAt.getFullYear()%>
+               </small>
+               <%}%>
+            </div>
+                    <small id="post-info-time">
+                        <a href="/posts/destroy/<%= post.id %>">delete</a>
+                    </small>
+        </div>
+        <div id="post-content">
+            <%= post.content%>
+        </div>
+        <hr>
+        <br>
+        <div id="post-comment">
+            <%- include('posts_comment_form')%>
+        </div>
+        <%if(post.comments) { %>
+            <%- include('comment')%>
+        <%}%>
+
+    </li>
+</div>

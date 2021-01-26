@@ -1,0 +1,33 @@
+#comments{
+    width:auto;
+    background-color:#E6E8EA;
+    display:flex;
+    flex-direction: row;padding:6px;
+    border-radius:6px;
+    #user-image{
+        width:auto;
+        i{
+            width:100%;
+            background-position: center;
+        }
+    }
+    #comment{
+        margin-left:8px;
+        padding:2px;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        #comment-info{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding:4px;
+        }
+        #comment-content{
+            padding:4px;
+            border-radius:6px;
+            min-height:40px;
+            background-color:white;
+        }
+    }
+}

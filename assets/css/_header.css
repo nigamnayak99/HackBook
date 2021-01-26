@@ -1,12 +1,15 @@
 @media only screen and (max-width: 1050px) {
   header #header-main {
-    background-color: #FFFFFF;
+    position: -webkit-sticky;
+    position: fixed;
+    width: 100vw;
+    background-color: white;
     color: black;
     border-radius: 4px;
-    opacity: 0.9;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: auto;
     height: 9%;
     box-shadow: 2px 2px 2px #D9DBDE;
     font-family: sans-serif; }
@@ -59,8 +62,7 @@
               color: #0A65C2;
               height: auto;
               padding: 10px;
-              font-size: medium;
-              visibility: hidden; } }
+              font-size: medium; } }
 
 @media only screen and (min-width: 1050px) {
   header #header-main {

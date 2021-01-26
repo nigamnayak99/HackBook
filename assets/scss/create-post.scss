@@ -1,0 +1,41 @@
+#main-post{
+    display:flex;
+    flex-direction: column;
+    min-height:150px;
+    padding:4px;
+    margin-bottom:20px;
+    background-color:#ffffff;
+    box-shadow: 2px 4px 4px #D9DBDE;
+    border-radius:6px;
+    #about{
+        height:20%;
+        width:auto;
+        padding:4px;
+    }
+    #form{
+        height:60%;
+        textarea{
+            width:100%;
+            height:150%;
+            border:none;
+        }
+    }
+    #post-button{
+        height:20%;
+        display:flex;
+        flex-direction:row-reverse;
+        input[type=submit] {
+            width:10%;
+            background-color:#0A65C2;
+            color: white;
+            padding: 9px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type=submit]:hover {
+            background-color: #0D85FF;
+          }
+    }
+}

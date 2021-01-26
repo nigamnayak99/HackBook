@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/comment.css">
+            <div id="comments">
+                <div id="user-image">
+                    <i class="fas fa-user-circle fa-3x">
+
+                    </i>
+                </div>
+                <%for(comment of post.comments){%>
+                <div id="comment">
+
+                    <div id="comment-info">
+                        <div>
+                            <b style="color:#0A65C2"><%= comment.user.name %></b>
+                            <small style="font-size:8px;text-align: left;">
+                                <%= comment.createdAt.getDate()+"-"+(post.createdAt.getMonth()+1)+"-"+post.createdAt.getFullYear()%>
+                            </small>
+                        </div>
+                        <%if (locals.user && locals.user.id == comment.user.id) {%>
+                        <div>
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                        <% } %>
+                    </div>
+
+                    <div id=comment-content>
+                        <%= comment.content %>
+                    </div>
+
+                    <div id="comment-options">
+                        <%if (locals.user && locals.user.id == comment.user.id) {%>
+                        <small >
+                            <a href="/comments/destroy/<%= comment.id %>">delete</a>
+                        </small>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+<%}%>

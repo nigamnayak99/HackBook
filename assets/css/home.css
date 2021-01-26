@@ -1,188 +1,20 @@
-@media only screen and (max-width: 1050px) {
-  #home-container #feed-post {
-    margin: auto;
-    width: 60vw; }
-    #home-container #feed-post #create-post {
-      height: auto;
-      background-color: white;
-      box-shadow: 2px 4px 4px #D9DBDE;
-      border-radius: 5px; }
-    #home-container #feed-post textarea {
-      border: none;
-      padding: 2px;
-      border-radius: 6px; }
-    #home-container #feed-post input {
-      border: none;
-      border-radius: 5px; }
-    #home-container #feed-post #post-list-container {
-      margin-top: 40px;
-      background-color: #E6E8E7;
-      width: auto; }
-      #home-container #feed-post #post-list-container ul {
-        padding: 0;
-        list-style-type: none; }
-        #home-container #feed-post #post-list-container ul #post {
-          background-color: white;
-          border-radius: 8px; }
-          #home-container #feed-post #post-list-container ul #post li {
-            margin: 0;
-            list-style-type: none;
-            margin-top: 20px;
-            box-shadow: 2px 2px 2px #D9DBDE;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 8px; }
-            #home-container #feed-post #post-list-container ul #post li #post-info #post-info-name b {
-              text-decoration: none;
-              color: black; }
-            #home-container #feed-post #post-list-container ul #post li #post-info #post-info-time {
-              font-size: 10;
-              color: #565656; }
-            #home-container #feed-post #post-list-container ul #post li #post-content {
-              height: auto;
-              min-height: 100px;
-              padding: 5px;
-              margin-top: 5px;
-              color: #262626; }
-  #home-container-notSigned {
-    width: 99vw;
-    height: 93%;
-    margin: auto; }
-    #home-container-notSigned #Sign-up-form {
-      background-color: grey; }
-    #home-container-notSigned #sign-up-image img {
-      background-size: contain;
-      height: 60%;
-      width: 100%;
-      border-radius: 10px; }
-    #home-container-notSigned #sign-up-buttons div {
-      margin-top: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      #home-container-notSigned #sign-up-buttons div ul {
-        list-style-type: none; }
-        #home-container-notSigned #sign-up-buttons div ul li button {
-          border: 0.5px;
-          border-radius: 10px;
-          border-color: #0A65C2;
-          margin: 10px;
-          color: #0A65C2;
-          height: auto;
-          padding: 10px;
-          font-size: medium; }
-    #home-container-notSigned #sign-up-form {
-      visibility: hidden; } }
-
-@media only screen and (min-width: 1050px) {
-  #home-container {
-    height: auto; }
-    #home-container #feed-post {
-      margin: auto;
-      width: 60vw; }
-      #home-container #feed-post #create-post {
-        height: auto;
-        background-color: white;
-        box-shadow: 2px 4px 4px #D9DBDE;
-        border-radius: 5px; }
-      #home-container #feed-post textarea {
-        border: none;
-        padding: 2px;
-        border-radius: 6px; }
-      #home-container #feed-post input {
-        border: none;
-        border-radius: 5px; }
-      #home-container #feed-post #post-list-container {
-        margin-top: 40px;
-        background-color: #E6E8E7; }
-        #home-container #feed-post #post-list-container ul {
-          padding: 0;
-          list-style-type: none; }
-          #home-container #feed-post #post-list-container ul #post {
-            background-color: white;
-            border-radius: 8px; }
-            #home-container #feed-post #post-list-container ul #post li {
-              margin: 0;
-              list-style-type: none;
-              margin-top: 20px;
-              box-shadow: 2px 2px 2px #D9DBDE;
-              padding: 10px;
-              text-decoration: none;
-              border-radius: 8px; }
-              #home-container #feed-post #post-list-container ul #post li #post-info #post-info-name b {
-                text-decoration: none;
-                color: black; }
-              #home-container #feed-post #post-list-container ul #post li #post-info #post-info-time {
-                font-size: 10;
-                color: #565656; }
-              #home-container #feed-post #post-list-container ul #post li #post-content {
-                height: auto;
-                min-height: 100px;
-                padding: 5px;
-                margin-top: 5px;
-                color: #262626; }
-    #home-container #home-container-notSigned {
-      width: 99vw;
-      height: 93%;
-      margin: auto;
-      display: flex;
-      flex-direction: row; }
-      #home-container #home-container-notSigned #sign-up-image img {
-        background-size: contain;
-        height: 60%;
-        width: 100%;
-        border-radius: 10px; }
-      #home-container #home-container-notSigned #sign-up-buttons {
-        visibility: hidden;
-        width: 10px; }
-        #home-container #home-container-notSigned #sign-up-buttons div {
-          margin-top: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto; }
-          #home-container #home-container-notSigned #sign-up-buttons div ul {
-            list-style-type: none; }
-            #home-container #home-container-notSigned #sign-up-buttons div ul li button {
-              border: 0.5px;
-              border-radius: 10px;
-              border-color: #0A65C2;
-              margin: 10px;
-              color: #0A65C2;
-              height: auto;
-              padding: 10px;
-              font-size: medium; }
-      #home-container #home-container-notSigned #sign-up-form {
-        width: 60%;
-        height: 100%;
-        overflow: hidden;
-        display: flex; }
-        #home-container #home-container-notSigned #sign-up-form #sign-up-form-container {
-          width: auto;
-          width: 100%;
-          overflow: hidden; }
-          #home-container #home-container-notSigned #sign-up-form #sign-up-form-container p {
-            text-align: center; }
-            #home-container #home-container-notSigned #sign-up-form #sign-up-form-container p b {
-              font-size: medium; }
-          #home-container #home-container-notSigned #sign-up-form #sign-up-form-container form label {
-            padding-left: 5px; }
-          #home-container #home-container-notSigned #sign-up-form #sign-up-form-container input[type=text], #home-container #home-container-notSigned #sign-up-form #sign-up-form-container input[type=email], #home-container #home-container-notSigned #sign-up-form #sign-up-form-container input[type=password] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1; }
-          #home-container #home-container-notSigned #sign-up-form #sign-up-form-container input[type=text]:focus, #home-container #home-container-notSigned #sign-up-form #sign-up-form-container input[type=password]:focus {
-            background-color: #ddd;
-            outline: none; }
-          #home-container #home-container-notSigned #sign-up-form #sign-up-form-container input[type=submit] {
-            background-color: #0A65C2;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9; } }
+#home-container {
+  margin-top: 2px; }
+  #home-container section {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    #home-container section #useful-links {
+      width: 20vw; }
+    #home-container section #feed-post {
+      width: 55vw;
+      min-height: 83vh; }
+      #home-container section #feed-post #create-post {
+        padding: 4px; }
+      #home-container section #feed-post #post-list-container ul {
+        margin: 0;
+        padding: 0; }
+    #home-container section #friends {
+      width: 20vw; }

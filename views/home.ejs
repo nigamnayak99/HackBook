@@ -1,139 +1,35 @@
 <link rel="stylesheet" href="/css/home.css"> 
-
-<h1>
-    HackBook / <%= title%>
-</h1>
-
-<!--Post Section Starts Here-->
 <div  id="home-container">
+
+
     <% if(locals.user) {%>
     <!--This Section is for Post-->
-    <section id="feed-post">
-    <h4>
-        Posts
-    </h4>
-    <div id="create-post">
-        <form action="/posts/create" id="new-post-form" method="POST">
-        <textarea name ="content"  placeholder="What's in your mind ,?" class="full-width" style="border-radius:6px;"></textarea>
-        <br>
-        <input class="full-width" type="submit"  value="Post">
-        </form>
+    <section>
+
+    <div id="useful-links">
+        <p>Useful Links</p>
     </div>
+    <div id="feed-post">
+            <div id="create-post">
+                <%- include('create_post')%>
+            </div>
 
-    <div id="post-list-container">
-        <ul>
-            <% for(post of posts){%>
-                <div id="post">
-                    <li >
-                        <div id="post-info" >
-                            <div id="post-info-name";>
-                               <b><%= post.user.name %></b>
-                               <%if (locals.user && locals.user.id == post.user.id) {%>
-                               <small>
-                                   <a href="/posts/destroy/<%= post.id %>">delete</a>
-                               </small>
-                               <%}%>
-                            </div>
-                                    <small id="post-info-time">
-                                        <%= post.createdAt.getDate()+"-"+(post.createdAt.getMonth()+1)+"-"+post.createdAt.getFullYear()%>
-                                    </small>
-                        </div>
-                        <div id="post-content">
-                            <%= post.content%>
-                        </div>
-                        <hr style="
-                            /* border: 0;
-                            height: 1px;
-                            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); */
-                            border: 0;
-                            height: 0;
-                            border-top: 1px solid rgba(0, 0, 0, 0.1);
-                            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-                        ">
-                        <br>
-                        <div id="post-comment" style="display:flex;flex-direction: row; justify-content: space-between;align-items:center; padding:5px;">
-                            <form action="/comments/create" method="POST" style="display:flex;flex-direction: row; justify-content: space-between;align-items:center ;width:100%;height:auto;padding:4px;">
-                                <input type="text" name="content" placeholder="Write Comment..." required="true" style="width:95%;background-color:#F0F2F5;height:auto;padding:4px;">
-  
+            <div id="post-list-container">
+                <ul>
+                    <% for(post of posts){%>
+                        <%- include('post')%>
+                    <% } %>
+                </ul>
+            </div>
+     </div>
+     <div id="friends">
+        <p>friends</p>
+     </div>
 
-                                <input type="hidden" name="post" value="<%= post._id %>" >
-   
-  
-                                <input type="submit" value="Post" style="margin-left:2px;color:#0A65C2;padding:4px;">
 
-                            </form>
-                        </div>
-                        <%if(post.comments) { %>
-                        <div>
-                                <%for(comment of post.comments){%>
-                                    <div style="display:flex;">
-                                        <div style="background-color:#F0F2F5;display:flex;flex-direction: column;margin:4px;width:auto;padding:5px;border-radius:8px;">
-                                                <div>
-                                                    <b style="color:#0A65C2"><%= comment.user.name %></b>
-                                                    <small style="font-size:8px;text-align: left;">
-                                                        <%= comment.createdAt.getDate()+"-"+(post.createdAt.getMonth()+1)+"-"+post.createdAt.getFullYear()%>
-                                                    </small>
-                                                </div>
-                                                <%= comment.content %>
-                                        </div>
-                                    </div>
-                                <%}%>
-                        </div>
-                        <%}%>
 
-                    </li>
-                </div>
-
-            <% } %>
-        </ul>
-    </div>
 </section>
     <% } else { %>
-        <section id="home-container-notSigned" ">
-            <div id="sign-up-image" >
-                <img src="/images/notSigned.png"  alt="nf" >
-            </div>
-            <div id="sign-up-buttons">
-                <div>
-                    <ul>
-                        <li>
-                            <button onclick="document.location='/users/sign-In'" type="button">Sign-In</button>
-                        </li>
-                        <li id="sign-up-b">
-                            <button onclick="document.location='/users/sign-Up'" type="button">Sign-Up</button>
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-            <div id="sign-up-form">
-                <div id="sign-up-form-container">
-                    <p><b>Please fill in this form to create an account.</b></p>
-                    <hr>
-                    <form action="/users/create" method="POST">
-                        <label for="name"><b>Name</b></label>
-                        <input type="text" name="name" placeholder="e.g : Bruce Wayne" required>
-                        <label for="email"><b>Email</b></label>
-                        <input type="email" name="email" placeholder="e.g : abc@xyz" required>
-                        <label for="name"><b>Password</b></label>
-                        <input type="password" name="password" placeholder="Xyz@123!" required>
-                        <label for="name"><b>Confirm Password</b></label>
-                        <input type="password" name="confirm_Password" placeholder="******" required>
-                        
-                        <div class='button'>
-                            <input type="submit" value="Sign up">
-                        </div>
-                    
-                        <hr>
-                    </form>
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                <p>Already have an account ? <a href="/users/sign-in" style="color:dodgerblue">Sign-in</a> here.</p>
-
-                </div>
-
-            </div>
-
-        </section>
-
+        <%- include('not_signed_in')%>
     <%}%>
 </div>

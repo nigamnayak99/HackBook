@@ -1,281 +1,328 @@
-
-//this css for mobile screen
-@media only screen and (max-width: 1050px ) {
 #home-container{
-    
-    #feed-post{
-        margin: auto;
-        width: 60vw;
-        #create-post{
-            height:auto;
-            background-color:white;
-            box-shadow: 2px 4px 4px #D9DBDE;
-            border-radius:5px;
+    margin-top:2px;
+    section{
+        display:flex;
+        border:1px solid black;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        #useful-links{
+            width:20vw;
         }
-        textarea{
-            border:none;
-            padding:2px;
-            border-radius:6px;
-        }
-        input{
-            border:none;
-            border-radius:5px;
-        }
-        #post-list-container{
-            margin-top:40px;
-            background-color:#E6E8E7;
-            width:auto;
-            ul{
-                padding:0;
-                list-style-type: none;
-                    #post{
-                        background-color:white;
-                        border-radius:8px;
-                        
-
-                            li{
-                                margin:0;
-                                list-style-type: none;
-                                margin-top:20px;
-                                box-shadow: 2px 2px 2px #D9DBDE;
-                                padding:10px;
-                                text-decoration:none;
-                                border-radius:8px;
-                                #post-info{
-                                    #post-info-name{
-                                        b{
-                                            text-decoration:none;
-                                            color:black;
-                                         }
-                                    }
-                                    #post-info-time{
-                                        font-size: min($numbers: 10);
-                                        color:#565656;
-                                    }
-                                }
-                                #post-content{
-                                    height:auto;
-                                    min-height: 100px;
-                                    padding:5px;
-                                    margin-top:5px;
-                                    color:#262626;
-                                }
-                                //all are inlined css here 
-                                //refer to ejs files
-                                }
-                            }
-                        }
+        #feed-post{
+            width:55vw;  
+            min-height: 83vh;
+            #create-post{
+                padding:4px;
             }
-        }
-
-    }
-    #home-container-notSigned{
-        width:99vw;
-        height:93%;
-        margin:auto;
-        #Sign-up-form{
-            background-color:grey;
-        }
-        #sign-up-image{
-            img{
-                background-size:contain;
-                height:60%;
-                width:100%;
-                border-radius:10px;
-            }
-        }
-        #sign-up-buttons{
-            div{
-                margin-top:50px;
-                display:flex;
-                justify-content: center;
-                align-items: center;
+            #post-list-container{
                 ul{
-                    list-style-type: none;
-                    li{
-                        button{
-                            border:0.5px;
-                            border-radius:10px;
-                            border-color:#0A65C2 ;
-                            margin:10px;
-                            color:#0A65C2;
-                            height:auto;
-                            padding:10px;
-                            font-size:medium;
-                        }
-                    }
+                    margin:0;
+                    padding:0;
                 }
             }
         }
-        #sign-up-form{
-            visibility: hidden;
+        #friends{
+            width:20vw;
         }
+
     }
 }
 
 
 
-//this css for Laptop Screen
-@media only screen and (min-width: 1050px) {
-    #home-container{
-        height:auto;
-        #feed-post{
-            margin: auto;
-            width: 60vw;
-            #create-post{
-                height:auto;
-                background-color:white;
-                box-shadow: 2px 4px 4px #D9DBDE;
-                border-radius:5px;
-            }
-            textarea{
-                border:none;
-                padding:2px;
-                border-radius:6px;
-            }
-            input{
-                border:none;
-                border-radius:5px;
-            }
-            #post-list-container{
-                margin-top:40px;
-                background-color:#E6E8E7;
-                ul{
-                    padding:0;
-                    list-style-type: none;
-                        #post{
-                            background-color:white;
-                            border-radius:8px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//this was previous code before updating..
+
+//this css for mobile screen
+// @media only screen and (max-width: 1050px ) {
+// #home-container{
+    
+//     #feed-post{
+//         margin: auto;
+//         width: 60vw;
+//         #create-post{
+//             height:auto;
+//             background-color:white;
+//             box-shadow: 2px 4px 4px #D9DBDE;
+//             border-radius:5px;
+//         }
+//         textarea{
+//             border:none;
+//             padding:2px;
+//             border-radius:6px;
+//         }
+//         input{
+//             border:none;
+//             border-radius:5px;
+//         }
+//         #post-list-container{
+//             margin-top:40px;
+//             background-color:#E6E8E7;
+//             width:auto;
+//             ul{
+//                 padding:0;
+//                 list-style-type: none;
+//                     #post{
+//                         background-color:white;
+//                         border-radius:8px;
+                        
+
+//                             li{
+//                                 margin:0;
+//                                 list-style-type: none;
+//                                 margin-top:20px;
+//                                 box-shadow: 2px 2px 2px #D9DBDE;
+//                                 padding:10px;
+//                                 text-decoration:none;
+//                                 border-radius:8px;
+//                                 #post-info{
+//                                     #post-info-name{
+//                                         b{
+//                                             text-decoration:none;
+//                                             color:black;
+//                                          }
+//                                     }
+//                                     #post-info-time{
+//                                         font-size: min($numbers: 10);
+//                                         color:#565656;
+//                                     }
+//                                 }
+//                                 #post-content{
+//                                     height:auto;
+//                                     min-height: 100px;
+//                                     padding:5px;
+//                                     margin-top:5px;
+//                                     color:#262626;
+//                                 }
+//                                 //all are inlined css here 
+//                                 //refer to ejs files
+//                                 }
+//                             }
+//                         }
+//             }
+//         }
+
+//     }
+//     #home-container-notSigned{
+//         width:99vw;
+//         height:93%;
+//         margin:auto;
+//         #Sign-up-form{
+//             background-color:grey;
+//         }
+//         #sign-up-image{
+//             img{
+//                 background-size:contain;
+//                 height:60%;
+//                 width:100%;
+//                 border-radius:10px;
+//             }
+//         }
+//         #sign-up-buttons{
+//             div{
+//                 margin-top:50px;
+//                 display:flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 ul{
+//                     list-style-type: none;
+//                     li{
+//                         button{
+//                             border:0.5px;
+//                             border-radius:10px;
+//                             border-color:#0A65C2 ;
+//                             margin:10px;
+//                             color:#0A65C2;
+//                             height:auto;
+//                             padding:10px;
+//                             font-size:medium;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//         #sign-up-form{
+//             visibility: hidden;
+//         }
+//     }
+// }
+
+
+
+// //this css for Laptop Screen
+// @media only screen and (min-width: 1050px) {
+//     #home-container{
+//         height:auto;
+//         #feed-post{
+//             margin: auto;
+//             width: 60vw;
+//             #create-post{
+//                 height:auto;
+//                 background-color:white;
+//                 box-shadow: 2px 4px 4px #D9DBDE;
+//                 border-radius:5px;
+//             }
+//             textarea{
+//                 border:none;
+//                 padding:2px;
+//                 border-radius:6px;
+//             }
+//             input{
+//                 border:none;
+//                 border-radius:5px;
+//             }
+//             #post-list-container{
+//                 margin-top:40px;
+//                 background-color:#E6E8E7;
+//                 ul{
+//                     padding:0;
+//                     list-style-type: none;
+//                         #post{
+//                             background-color:white;
+//                             border-radius:8px;
                             
     
-                                li{
-                                    margin:0;
-                                    list-style-type: none;
-                                    margin-top:20px;
-                                    box-shadow: 2px 2px 2px #D9DBDE;
-                                    padding:10px;
-                                    text-decoration:none;
-                                    border-radius:8px;
-                                    #post-info{
-                                        #post-info-name{
-                                            b{
-                                                text-decoration:none;
-                                                color:black;
-                                             }
-                                        }
-                                        #post-info-time{
-                                            font-size: min($numbers: 10);
-                                            color:#565656;
-                                        }
-                                    }
-                                    #post-content{
-                                        height:auto;
-                                        min-height: 100px;
-                                        padding:5px;
-                                        margin-top:5px;
-                                        color:#262626;
-                                    }
-                                }
-                            }
-                }
-            }
+//                                 li{
+//                                     margin:0;
+//                                     list-style-type: none;
+//                                     margin-top:20px;
+//                                     box-shadow: 2px 2px 2px #D9DBDE;
+//                                     padding:10px;
+//                                     text-decoration:none;
+//                                     border-radius:8px;
+//                                     #post-info{
+//                                         #post-info-name{
+//                                             b{
+//                                                 text-decoration:none;
+//                                                 color:black;
+//                                              }
+//                                         }
+//                                         #post-info-time{
+//                                             font-size: min($numbers: 10);
+//                                             color:#565656;
+//                                         }
+//                                     }
+//                                     #post-content{
+//                                         height:auto;
+//                                         min-height: 100px;
+//                                         padding:5px;
+//                                         margin-top:5px;
+//                                         color:#262626;
+//                                     }
+//                                 }
+//                             }
+//                 }
+//             }
     
-        }
-        #home-container-notSigned{
-            width:99vw;
-            height:93%;
-            margin:auto;
-            display:flex;
-            flex-direction: row;
-            #sign-up-image{
-                img{
-                    background-size:contain;
-                    height:60%;
-                    width:100%;
-                    border-radius:10px;
-                }
-            }
-            #sign-up-buttons{
-                visibility: hidden;
-                width:10px;
-                div{
-                    margin-top:50px;
-                    display:flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin:auto;
-                    ul{
-                        list-style-type: none;
-                        li{
-                            button{
-                                border:0.5px;
-                                border-radius:10px;
-                                border-color:#0A65C2 ;
-                                margin:10px;
-                                color:#0A65C2;
-                                height:auto;
-                                padding:10px;
-                                font-size:medium;
-                            }
-                        }
-                    }
-                }
-            }
+//         }
+//         #home-container-notSigned{
+//             width:99vw;
+//             height:93%;
+//             margin:auto;
+//             display:flex;
+//             flex-direction: row;
+//             #sign-up-image{
+//                 img{
+//                     background-size:contain;
+//                     height:60%;
+//                     width:100%;
+//                     border-radius:10px;
+//                 }
+//             }
+//             #sign-up-buttons{
+//                 visibility: hidden;
+//                 width:10px;
+//                 div{
+//                     margin-top:50px;
+//                     display:flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     margin:auto;
+//                     ul{
+//                         list-style-type: none;
+//                         li{
+//                             button{
+//                                 border:0.5px;
+//                                 border-radius:10px;
+//                                 border-color:#0A65C2 ;
+//                                 margin:10px;
+//                                 color:#0A65C2;
+//                                 height:auto;
+//                                 padding:10px;
+//                                 font-size:medium;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
             
-            #sign-up-form{
-                width:60%;
-                height:100%;
-                overflow: hidden;
-                display: flex;
-                #sign-up-form-container{
-                    width:auto;
-                    width:100%;
-                    overflow: hidden;
-                    p{
-                        text-align: center;
-                        b{
-                            font-size:medium;
-                        }
-                    }
-                    form{
-                        label{
-                            padding-left:5px;
-                        }
-                    }
-                    input[type=text],input[type=email],input[type=password] {
+//             #sign-up-form{
+//                 width:60%;
+//                 height:100%;
+//                 overflow: hidden;
+//                 display: flex;
+//                 #sign-up-form-container{
+//                     width:auto;
+//                     width:100%;
+//                     overflow: hidden;
+//                     p{
+//                         text-align: center;
+//                         b{
+//                             font-size:medium;
+//                         }
+//                     }
+//                     form{
+//                         label{
+//                             padding-left:5px;
+//                         }
+//                     }
+//                     input[type=text],input[type=email],input[type=password] {
 
-                        width:100%;
-                        padding: 15px;
-                        margin: 5px 0 22px 0;
-                        display: inline-block;
-                        border: none;
-                        background: #f1f1f1;
+//                         width:100%;
+//                         padding: 15px;
+//                         margin: 5px 0 22px 0;
+//                         display: inline-block;
+//                         border: none;
+//                         background: #f1f1f1;
                     
-                      }
-                      input[type=text]:focus, input[type=password]:focus {
-                        background-color: #ddd;
-                        outline: none;
-                      }
-                      input[type=submit] {
-                        background-color: #0A65C2;
-                        color: white;
-                        padding: 14px 20px;
-                        margin: 8px 0;
-                        border: none;
-                        cursor: pointer;
-                        width: 100%;
-                        opacity: 0.9;
-                      }
+//                       }
+//                       input[type=text]:focus, input[type=password]:focus {
+//                         background-color: #ddd;
+//                         outline: none;
+//                       }
+//                       input[type=submit] {
+//                         background-color: #0A65C2;
+//                         color: white;
+//                         padding: 14px 20px;
+//                         margin: 8px 0;
+//                         border: none;
+//                         cursor: pointer;
+//                         width: 100%;
+//                         opacity: 0.9;
+//                       }
 
-                }
-            }
-        }
-    }
- }
-
-
+//                 }
+//             }
+//         }
+//     }
+//  }
 
 
+
+//This Is Old Code 
 
 //  @media only screen and (min-width: 1050px) {
 //     #home-container{

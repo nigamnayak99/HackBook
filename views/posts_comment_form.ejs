@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/css/posts_comment_form.css">
+<div id="post-comment-form">
+    <form action="/comments/create" method="POST" >
+        <input type="text" name="content" placeholder="Write Comment..." required="true">
+    
+    
+        <input type="hidden" name="post" value="<%= post._id %>" >
+    
+    
+        <input type="submit" value="Post">
+    
+    </form>
+</div>

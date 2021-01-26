@@ -1,5 +1,7 @@
 const Comment = require('../models/comment');
 const Post = require('../models/post');
+
+//create a comment
 module.exports.create = function(req,res){
     Post.findById(req.body.post,function(err,post){
         if(post){
@@ -16,4 +18,20 @@ module.exports.create = function(req,res){
         }
     });
 
+}
+
+//delete a comment
+module.exports.destroy = function(req,res){
+    Comment.findById(req.params.id,function(err,comment){ //finding a comment
+        if(comment.user == req.user.id){
+            //if owner of comment matches the current user
+            let postId = comment.post;
+            comment.remove();
+            Post.findById(postId,{$pull:{comments:req.params.id}});
+             return res.redirect('back');
+
+        }else{
+            return res.redirect('back');
+        }
+    });
 }

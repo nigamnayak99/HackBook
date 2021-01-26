@@ -1,0 +1,37 @@
+#post{
+    height:auto;
+    background-color:white;
+    box-shadow: 2px 4px 4px #D9DBDE;
+    border-radius:5px;
+    padding:5px;
+    li{
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        #post-info{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            #post-info-name{
+                display:inline;
+                b{
+                    color:#0A65C2;
+                }
+                small{
+                    font-size:6px;
+                }
+            }
+
+        }
+        #post-content{
+            margin-top:2px;
+            border-radius: 6px;
+            padding:4px;
+            border:1px solid grey;
+            width:auto;
+            min-height:150px;
+
+        }
+
+    }
+}

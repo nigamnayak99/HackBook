@@ -1,0 +1,28 @@
+#comments {
+  width: auto;
+  background-color: #E6E8EA;
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  border-radius: 6px; }
+  #comments #user-image {
+    width: auto; }
+    #comments #user-image i {
+      width: 100%;
+      background-position: center; }
+  #comments #comment {
+    margin-left: 8px;
+    padding: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    #comments #comment #comment-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 4px; }
+    #comments #comment #comment-content {
+      padding: 4px;
+      border-radius: 6px;
+      min-height: 40px;
+      background-color: white; }
