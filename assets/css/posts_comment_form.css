@@ -3,14 +3,20 @@
   justify-content: center;
   align-items: center; }
   #post-comment-form form {
-    width: 100%; }
-    #post-comment-form form input[type=text], #post-comment-form form select, #post-comment-form form textarea {
-      width: 90%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical; }
-    #post-comment-form form input[type=submit] {
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+    #post-comment-form form #input {
+      width: 90%; }
+      #post-comment-form form #input input[type=text] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical; }
+    #post-comment-form form #button input[type=submit] {
+      width: 100%;
+      width: auto;
       background-color: #0A65C2;
       color: white;
       padding: 9px 24px;
@@ -18,5 +24,5 @@
       border-radius: 4px;
       cursor: pointer;
       float: right; }
-    #post-comment-form form input[type=submit]:hover {
+    #post-comment-form form #button input[type=submit]:hover {
       background-color: #0D85FF; }

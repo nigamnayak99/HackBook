@@ -1,7 +1,8 @@
-
+#body{
+    height:83vh;
+    width:100vw;
 .main{
     background-color:rgba(252, 252, 252, 0.925);
-    height: auto;
     width: 430px;
     margin:auto;
     padding:10px;
@@ -52,3 +53,4 @@ input[type=text],input[type=email],input[type=password] {
     width: 100%;
     opacity: 0.9;
   }
+}

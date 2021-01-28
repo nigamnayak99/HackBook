@@ -4,14 +4,22 @@
     align-items: center;
     form{
         width:100%;
-        input[type=text], select, textarea {
-            width: 90%;
+        display:flex;
+        flex-direction: row;
+        #input{
+            width:90%;
+        input[type=text] {
+            width:100%;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
             resize: vertical;
         }
+        } 
+        #button{  
         input[type=submit] {
+            width:100%;
+            width:auto;
             background-color:#0A65C2;
             color: white;
             padding: 9px 24px;
@@ -23,5 +31,6 @@
         input[type=submit]:hover {
             background-color: #0D85FF;
           }
+        }
     }
 }

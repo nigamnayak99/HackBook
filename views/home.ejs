@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="/css/home.css"> 
+
 <div  id="home-container">
-
-
     <% if(locals.user) {%>
     <!--This Section is for Post-->
     <section>
@@ -23,11 +22,12 @@
             </div>
      </div>
      <div id="friends">
-        <p>friends</p>
+        <p style=" font-weight: 600; text-align: center;">Friends</p>
+        <hr>
+        <div id="all-users">
+            <%- include('all_users')%>
+        </div>
      </div>
-
-
-
 </section>
     <% } else { %>
         <%- include('not_signed_in')%>

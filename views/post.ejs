@@ -5,7 +5,7 @@
     <li >
         <div id="post-info" >
             <div id="post-info-name";>
-               <b><%= post.user.name %></b>
+               <a href="/users/profile/<%= post.user.id%>" style="text-decoration:none;color:#0A65C2;"><b><%= post.user.name %></b></a>
                <%if (locals.user && locals.user.id == post.user.id) {%>
                <small>
                 <%= post.createdAt.getDate()+"-"+(post.createdAt.getMonth()+1)+"-"+post.createdAt.getFullYear()%>

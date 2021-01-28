@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="/css/all_users.css"> 
+<div id="all-users">
+    <ul>
+        <% for(each_user of all_users) {%>
+            <li>
+               <a href="/users/profile/<%=each_user.id%>" style="text-decoration:none;color:#0A65C2;"> <b><p style="margin-left:5px; "><%= each_user.name %></p></b> </a>
+            </li>
+         <% } %> 
+    </ul>  
+</div>

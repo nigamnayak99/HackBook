@@ -1,20 +1,33 @@
-#home-container {
-  margin-top: 2px; }
-  #home-container section {
-    display: flex;
-    border: 1px solid black;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around; }
-    #home-container section #useful-links {
-      width: 20vw; }
-    #home-container section #feed-post {
-      width: 55vw;
-      min-height: 83vh; }
-      #home-container section #feed-post #create-post {
-        padding: 4px; }
-      #home-container section #feed-post #post-list-container ul {
-        margin: 0;
-        padding: 0; }
-    #home-container section #friends {
-      width: 20vw; }
+@media only screen and (min-width: 300px) {
+  #home-container {
+    padding-top: 180px; } }
+
+@media only screen and (min-width: 600px) {
+  #home-container {
+    margin-top: 2px;
+    padding-top: 80px; }
+    #home-container section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      #home-container section #useful-links {
+        width: 20vw; }
+      #home-container section #feed-post {
+        width: 55vw;
+        min-height: 83vh; }
+        #home-container section #feed-post #create-post {
+          padding: 4px; }
+        #home-container section #feed-post #post-list-container ul {
+          margin: 0;
+          padding: 0; }
+      #home-container section #friends {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        width: 20vw;
+        padding: 4px;
+        background-color: white;
+        border-radius: 6px; }
+        #home-container section #friends #all-users {
+          height: auto;
+          width: auto; } }

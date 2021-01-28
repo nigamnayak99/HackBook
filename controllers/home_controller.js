@@ -35,14 +35,13 @@ module.exports.home= function(req,res){
                 //for(post of posts){         
                 //     console.log(post.user);
                 // }
-
-
-            return res.render('home',{
-                title:"HackBook | Home",
-                posts:posts
+            user.find({},function(err,users){
+                return res.render('home',{
+                    title:"HackBook | Home",
+                    posts:posts,//sending all  posts 
+                    all_users:users //sending all users as locals
+                });
             });
         
     });
-
-
 }

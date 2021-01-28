@@ -1,7 +1,6 @@
 @media only screen and (max-width: 1050px) {
 header{
 #header-main{
-    position: -webkit-sticky;
     position:fixed;
     width:100vw;
     background-color:white;
@@ -14,6 +13,7 @@ header{
     height:9%;
     box-shadow: 2px 2px 2px #D9DBDE;
     font-family: sans-serif;
+    opacity: 1;
     #header-content{
         height:60%;
         width:100%;
@@ -81,6 +81,8 @@ header{
 @media only screen and (min-width: 1050px) {
     header{
 #header-main{
+    position:fixed;
+    width:100vw;
     background-color:#FFFFFF;
     color: black;
     border-radius: 4px;
@@ -91,6 +93,7 @@ header{
     height:9%;
     box-shadow: 2px 2px 2px #D9DBDE;
     font-family: sans-serif;
+    opacity: 1;
     #header-content{
         height:60%;
         width:100%;
