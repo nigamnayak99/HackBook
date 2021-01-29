@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1050px) {
   header #header-main {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     background-color: white;
     color: black;
     border-radius: 4px;
@@ -66,8 +66,8 @@
 
 @media only screen and (min-width: 1050px) {
   header #header-main {
+    width: 100%;
     position: fixed;
-    width: 100vw;
     background-color: #FFFFFF;
     color: black;
     border-radius: 4px;

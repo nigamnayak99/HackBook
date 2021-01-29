@@ -1,5 +1,7 @@
 const Comment = require('../models/comment');
 const Post = require('../models/post');
+const User = require('../models/user');
+const { post } = require('./users_controller');
 
 //create a comment
 module.exports.create = async function(req,res){
@@ -48,6 +50,7 @@ module.exports.destroy = async function(req,res){
             //if owner of comment matches the current user
             let postId = comment.post;
             comment.remove();
+            req.flash('success','Your comment was deleted ');
             await Post.findByIdAndUpdate(postId,{$pull:{comments:req.params.id}});
             return res.redirect('back');
         }else{
@@ -55,7 +58,7 @@ module.exports.destroy = async function(req,res){
         }
 
     }catch(err){
-        console.log(err,"Error");
+        req.flash('err',err);
         return;
     }
 

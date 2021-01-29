@@ -74,10 +74,12 @@ module.exports.create =async  function(req,res){
 }
 //sigin in and creating session
 module.exports.createSession = function(req,res){
+    req.flash('success','Logged In SuccessFully . . .');
     return res.redirect('/');
 }
 module.exports.destroySession = function(req,res){
     //logout is given by passport
     req.logout();
+    req.flash('success','Logged Out SuccessFully . . .');
     return res.redirect('/');
 }

@@ -16,6 +16,8 @@ const passportLocal = require('./config/passport-local-strategy');
 const { ppid } = require('process');
 const MongoStore = require('connect-mongo')(session);
 const sassMiddleware = require('node-sass-middleware');
+const flash = require('connect-flash');
+const flashMiddleware = require('./config/flash');
 
 //this is scss middleware
 //this middleware must be called before 
@@ -67,6 +69,10 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
+
+//flash-middleware
+app.use(flash());
+app.use(flashMiddleware.setFlash);
 
 
 //Setting up Router

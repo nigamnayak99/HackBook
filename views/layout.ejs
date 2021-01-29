@@ -6,8 +6,14 @@
         <title>
             <%=title%>
         </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
         <script src="https://kit.fontawesome.com/7fbf0dbe07.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
         <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/_header.css">
+        <link rel="stylesheet" href="/css/_footer.css">
 
         <%- style %><!--Extracting Styles automatically from body_pages-->
 
@@ -16,7 +22,7 @@
 <!---*************************************************-->
     <body ><!--Body Starts Here-->
         <%- include('_header')-%>
-        <main id="layout-main" >
+        <main id="layout-main">
             <!--Header and footer previously were outside of body-->
             <%- body %><!-- Predefined 'body' which automatically -->
                     <!-- loads the required body -->
@@ -24,6 +30,33 @@
         <%- include('_footer'); -%>
 
         <%- script %><!--Extracting Scripts automatically from body_pages-->
+        <script>
+                <%if(flash.success && flash.success.length > 0) { %>
+                new Noty({
+                theme:'bootstrap-v4',
+                text:'<%= flash.success %>',
+                type:'success',
+                layout:'topRight',
+                progressBar:false,
+                timeout:1500
+
+                }).show();
+                <%}%>
+
+
+                <%if(flash.error && flash.error.length > 0) { %>
+                new Noty({
+                theme:'bootstrap-v4',
+                text:'<%= flash.error %>',
+                type:'error',
+                layout:'topRight',
+                progressBar:false,
+                timeout:1500
+
+                }).show();
+                <%}%>
+        </script>
     </body><!--Body Ends Here-->
+
 
 </html>
